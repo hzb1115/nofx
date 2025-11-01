@@ -637,6 +637,7 @@ func (s *Server) handleUpdateModelConfigs(c *gin.Context) {
 		}
 	}
 
+
 	// 重新加载该用户的所有交易员，使新配置立即生效
 	err := s.traderManager.LoadUserTraders(s.database, userID)
 	if err != nil {
@@ -662,6 +663,7 @@ func (s *Server) handleGetExchangeConfigs(c *gin.Context) {
 	
 	c.JSON(http.StatusOK, exchanges)
 }
+
 
 // handleUpdateExchangeConfigs 更新交易所配置
 func (s *Server) handleUpdateExchangeConfigs(c *gin.Context) {
