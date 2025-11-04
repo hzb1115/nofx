@@ -1734,3 +1734,6 @@ func (s *Server) handleGetPublicTraderConfig(c *gin.Context) {
 	c.JSON(http.StatusOK, result)
 }
 
+
+func (s *Server) handleGetTraderConfig(c *gin.Context) {
+}
